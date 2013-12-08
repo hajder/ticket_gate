@@ -19,10 +19,6 @@ module TicketGate
       get "tickets/#{id}", :transformer => Ticket
     end
 
-    def create_ticket params
-      post "tickets", :extra_body => { :ticket => params }, :transformer => Ticket
-    end
-
     def update_ticket id, params
       put "tickets/#{id}", :extra_body => { :ticket => params }, :transformer => Ticket
     end
