@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = TicketGate::VERSION
   spec.authors       = ["Dennis Charles Hackethal", "Stagelink GmbH"]
   spec.email         = ["dennis.hackethal@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Ruby client for Stagelink's ticketing API.}
+  spec.summary       = %q{TicketGate lets you connect to Stagelink's ticketing API and instantly create events and sell tickets.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
