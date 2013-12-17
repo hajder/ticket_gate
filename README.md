@@ -36,7 +36,7 @@ Or install it yourself as:
           :start_at => 1.week.from_now,
           :end_at => 2.week.from_now + 2.hours
         )
-         => #<TicketGate::Client::Event created_at="2013-12-09T10:36:23Z" end_at="2013-12-23T12:36:23Z" id=4 name="Me live!" parent_id=nil start_at="2013-12-16T10:36:23Z" ticket_limit=nil updated_at="2013-12-09T10:36:23Z">
+         => #<TicketGate::Client::Event created_at="2013-12-17T12:03:28Z" currency="EUR" end_at="2013-12-31T14:03:28Z" id=3 name="Me live!" parent_id=nil start_at="2013-12-24T12:03:28Z" ticket_limit=nil updated_at="2013-12-17T12:03:28Z"> 
 
         # Create ticket category
         ticket_category = client.create_ticket_category(
@@ -45,7 +45,7 @@ Or install it yourself as:
           :price => 10,
           :currency => 'USD'
         )
-         => #<TicketGate::Client::TicketCategory created_at="2013-12-09T10:40:54Z" currency="USD" description=nil event_id=4 id=2 name="Awesome ticket" price=10.0 ticket_limit=nil updated_at="2013-12-09T10:40:54Z">
+         => #<TicketGate::Client::TicketCategory created_at="2013-12-17T12:04:02Z" description=nil event_id=3 id=2 include_qr_code=true name="Awesome ticket" price=10.0 sales_end_at=nil ticket_limit=nil updated_at="2013-12-17T12:04:02Z">
 
     Returned resources are wrapped in `TicketGate::Client::#{resource_name}` and act like any other object in Ruby:
 
@@ -54,9 +54,9 @@ Or install it yourself as:
 
 3. Sell tickets!
 
-        <embed src="https://api.stagelink.com/events/<%= #{event.id} %>"></embed>
+        <embed src="https://api.stagelink.com/purchases/new?event_id=<%= #{event.id} %>"></embed>
 
-This will display your event and enable people to buy tickets from the categories you specified.
+This will display your event's ticket categories and enable people to buy tickets.
 
 ### Resources
 The API offers the following resources with the following methods to interact:
@@ -119,7 +119,7 @@ The API offers the following resources with the following methods to interact:
     - `#update_webhook(id, params = {})`
     - `#destroy_webhook(id)`
     
-The list actions return a paginated array of resources, all other actions will return a single resource. In addition, tickets can be punched; purchases can only be read (as collection and single resource), not manipulated.
+List actions return a paginated array of resources, all other actions will return a single resource.
 
 For more information on how the Stagelink Ticketing API works, check out [https://api.stagelink.com/docs](https://api.stagelink.com/docs).
 
