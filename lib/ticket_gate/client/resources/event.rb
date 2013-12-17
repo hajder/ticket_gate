@@ -2,6 +2,7 @@ module TicketGate
   class Client < RocketPants::Client
     class Event < APISmith::Smash
       property :created_at
+      property :currency
       property :end_at
       property :id
       property :name

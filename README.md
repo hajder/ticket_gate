@@ -112,6 +112,12 @@ The API offers the following resources with the following methods to interact:
     - `#create_venue(params = {})`
     - `#update_venue(id, params = {})`
     - `#destroy_venue(id)`
+- Webhook
+    - `#list_webhooks`
+    - `#get_webhook(id)`
+    - `#create_webhook(params = {})`
+    - `#update_webhook(id, params = {})`
+    - `#destroy_webhook(id)`
     
 The list actions return a paginated array of resources, all other actions will return a single resource. In addition, tickets can be punched; purchases can only be read (as collection and single resource), not manipulated.
 

@@ -12,7 +12,7 @@ describe 'Event' do
   describe 'Properties' do
     subject { TicketGate::Client::Event }
 
-    [ :created_at, :end_at, :id, :name, :parent_id, :start_at, :ticket_limit, :updated_at ].each do |property|
+    [ :created_at, :currency, :end_at, :id, :name, :parent_id, :start_at, :ticket_limit, :updated_at ].each do |property|
       its(:properties) { should include property }
     end
   end

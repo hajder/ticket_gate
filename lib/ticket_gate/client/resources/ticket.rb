@@ -27,6 +27,10 @@ module TicketGate
       delete "tickets/#{id}", :transformer => Ticket
     end
 
+    def deliver_ticket id
+      post "tickets/#{id}/deliver", :transformer => Ticket
+    end
+
     def punch_ticket barcode
       put "tickets", :extra_body => { :barcode => barcode }, :transformer => Ticket
     end

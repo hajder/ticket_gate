@@ -2,12 +2,13 @@ module TicketGate
   class Client < RocketPants::Client
     class TicketCategory < APISmith::Smash
       property :created_at
-      property :currency
       property :description
       property :event_id
       property :id
+      property :include_qr_code
       property :name
       property :price
+      property :sales_end_at
       property :ticket_limit
       property :updated_at
     end
