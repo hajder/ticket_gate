@@ -3,7 +3,7 @@ module TicketGate
     # ---- Setup -----------------------------------
     # ----------------------------------------------
     version 1
-    base_uri 'http://localhost:3000'
+    base_uri 'https://api.stagelink.com'
 
     def initialize access_token = nil
       raise 'Please initialize with your api access token' unless access_token
