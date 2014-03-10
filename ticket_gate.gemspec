@@ -22,4 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rocket_pants"
+  
+  spec.add_runtime_dependency "rocket_pants", "~> 1.9.1"
 end
